@@ -1,0 +1,5 @@
+{
+  "name": "De-Synthesize Pro",
+  "description": "A professional-grade tool to remove the synthetic 'AI look' from generated characters by adding natural skin textures, subtle imperfections, and authentic 400 ISO film grain using Gemini 3 Pro Image.",
+  "requestFramePermissions": []
+}

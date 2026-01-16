@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De-Synthesize Pro | Analog Recovery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // These will now map to CSS variables for dynamic cross-fading
+            kodak: {
+              red: 'var(--theme-brand)',
+              yellow: 'var(--theme-accent)',
+              cream: '#FDFCF0',
+              dark: '#1A1A1A'
+            }
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            display: ['Bebas Neue', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --theme-brand: #E12127;
+      --theme-accent: #FFD500;
+      --theme-bg: #1A1A1A;
+      --theme-surface: #2a2a2a;
+      --theme-text: #FDFCF0;
+      --theme-logo-bg: #FFD500;
+      --theme-logo-text: #E12127;
+    }
+
+    body {
+      background-color: var(--theme-bg);
+      color: var(--theme-text);
+      transition: background-color 0.6s ease-in-out;
+    }
+
+    /* Global transition for all theme-affected elements */
+    .theme-transition {
+      transition: all 0.6s ease-in-out;
+    }
+
+    .kodak-gradient {
+      background: linear-gradient(135deg, var(--theme-brand) 0%, var(--theme-accent) 100%);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #222;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--theme-brand);
+      border-radius: 10px;
+    }
+
+    /* Range input styling for the theme */
+    input[type=range]::-webkit-slider-thumb {
+      background: var(--theme-accent);
+      border: 2px solid var(--theme-brand);
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
